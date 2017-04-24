@@ -1,6 +1,70 @@
+@import 'variables';
+@import 'mixins';
+
 
 * {
 	box-sizing: border-box;
 }
+
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: "Arial", "Helvetica", sans-serif;
+	color: #444;
+	background: #000;
+}
+
+.navigation {
+	@include flexRow;
+
+	justify-content: center;
+
+	height: 60px;
+	width: 100%;
+
+		.navigation__img {
+			background-repeat: no-repeat;
+			background-size: fill;
+			background-position: center;
+		}
+
+		.navigation__img--logo {
+			background-image: url(../img/jeep-logo.png);
+			width: 95px;
+			height: 60px;
+		}
+
+		.navigation__img--build-ribbon {
+
+		}
+
+		.navigation__navlink {
+			@include flexRow;
+			padding: 20px;
+			align-items: center;
+			text-align: center;
+			font-weight: 600;
+		}
+		.navigation__img--build-ribbon {
+
+		}
+}
+
+.carousel {
+	.carousel__img {
+		width: 100%;
+		height: 740px;
+	}
+
+	.carousel__img--feature1 {
+		
+	}
+}
+
+
+
+
+
 
 

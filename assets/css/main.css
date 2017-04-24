@@ -1,3 +1,39 @@
-
 * {
   box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", "Helvetica", sans-serif;
+  color: #444;
+  background: #000; }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 60px;
+  width: 100%; }
+  .navigation .navigation__img {
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center; }
+  .navigation .navigation__img--logo {
+    background-image: url(../img/jeep-logo.png);
+    width: 95px;
+    height: 60px; }
+  .navigation .navigation__navlink {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600; }
+
+.carousel .carousel__img {
+  width: 100%;
+  height: 740px; }
+
+/*# sourceMappingURL=main.css.map */
