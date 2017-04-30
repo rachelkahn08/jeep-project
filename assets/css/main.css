@@ -8,6 +8,10 @@ html, body {
   color: #444;
   background: #000; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -32,11 +36,12 @@ html, body {
     padding: 20px;
     align-items: center;
     text-align: center;
-    font-weight: 600; }
-  .navigation .navigation__navlink--state-active {
-    border-top: 4px solid #ffb302;
+    font-weight: 600;
+    border-top: 4px solid transparent;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; }
+  .navigation .navigation__navlink--state-active {
+    border-top-color: #ffb302; }
 
 .carousel {
   width: 100%; }
@@ -55,5 +60,116 @@ html, body {
     z-index: 2;
     width: 100%;
     background-image: url(../img/feature-1-vehicles.jpg); }
+
+.hero {
+  width: 100%;
+  color: #eee; }
+  .hero .hero__image {
+    background-image: url(../img/vehicles-wrangler-main.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: top center;
+    padding: 4vw 3vw 3vw 4vw; }
+  .hero .hero--content {
+    max-width: 50vw; }
+  .hero .hero__header {
+    font-size: 4.5vw;
+    text-shadow: 2px 2px 2px black; }
+  .hero .hero__subtitle {
+    text-transform: uppercase;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: 2vw;
+    text-shadow: 2px 2px 2px black; }
+  .hero .hero__copy {
+    padding: 2vw;
+    line-height: 2vw;
+    max-width: 30vw;
+    font-size: 1.4vw;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.banner-middle {
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  transform: translateY(-25%);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-wrap: wrap; }
+  .banner-middle .banner-middle__top-half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 3vw; }
+  .banner-middle .banner-middle__top-half__pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    width: 20%; }
+  .banner-middle .pricing-header--price-type {
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 0.5vw; }
+  .banner-middle .pricing-amount {
+    font-weight: 100;
+    font-size: 2.5vw;
+    letter-spacing: 0.15vw; }
+  .banner-middle .pricing-amount--lease-term {
+    max-width: 6.5vw;
+    font-size: 1vw;
+    align-self: flex-end;
+    font-weight: 700;
+    margin-left: 1vw; }
+  .banner-middle .pricing-amount--msrp {
+    width: 100%; }
+  .banner-middle .disclaimer {
+    font-size: 1vw;
+    width: 14vw;
+    margin-top: 0.5vw;
+    line-height: 1.3vw; }
+  .banner-middle .banner-middle__top-half--promo-header {
+    margin: 2vw;
+    width: 30%;
+    height: 100%;
+    margin-left: 27.5%;
+    align-self: flex-end;
+    background-image: url(../img/promo-header.png);
+    background-size: 100%; }
+  .banner-middle .banner-middle__bottom-half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url(../img/awards-background.jpg);
+    background-size: fill;
+    padding: 2.5vw; }
+  .banner-middle .banner-middle__bottom-half--award-icon {
+    background-image: url(../img/award-icon.png);
+    height: 88px;
+    width: 83px;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  .banner-middle .banner-middle__bottom-half__copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2vw; }
+  .banner-middle .banner-middle__bottom-half--award {
+    margin: 0.35vw; }
+  .banner-middle .bold {
+    font-weight: 700;
+    font-size: 2vw; }
 
 /*# sourceMappingURL=main.css.map */
