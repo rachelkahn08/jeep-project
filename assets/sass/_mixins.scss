@@ -23,3 +23,8 @@
 @mixin dropShadow {
 	text-shadow: 2px 2px 2px black;
 }
+
+@mixin sitemapMargins {
+	margin-left: 5vw;
+	margin-right: 5vw; 
+}

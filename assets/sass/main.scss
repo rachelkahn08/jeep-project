@@ -12,7 +12,7 @@ html, body {
 	width: 100%;
 	font-family: "Arial", "Helvetica", sans-serif;
 	color: #444;
-	background: #000;
+	background: $darkGrey;
 }
 
 a {
@@ -22,7 +22,6 @@ a {
 
 .navigation {
 	@include flexRow;
-	// @include navigationGradient(180deg);
 	
 	padding-left: 60px;
 	padding-right: 60px;
@@ -32,11 +31,14 @@ a {
 	height: 60px;
 	width: 100%;
 
+	background: linear-gradient(to bottom, #333333 20%,#000000 84%); 
+
 
 		.navigation__img {
 			background-repeat: no-repeat;
 			background-size: fill;
 			background-position: center;
+			margin-right: 1vw;
 		}
 
 		.navigation__img--logo {
@@ -46,26 +48,26 @@ a {
 		}
 
 		.navigation__img--build-ribbon {
-
+			height: 94px;
+			width: 64px;
+			background-image: url(../img/build-ribbon.png);
+			background-size: 100%;
+			margin-left: 25vw;
 		}
 
 		.navigation__navlink {
-			@include flexRow;
+			color: $lightGrey;
 			padding: 20px;
-			align-items: center;
+			padding-top: 16px;
 			text-align: center;
 			font-weight: 600;
-			border-top: 4px solid transparent;
-			border-left: 4px solid transparent;
-			border-right: 4px solid transparent;
+			border-top: 4px solid #333;
+			border-left: 1.5px solid #000;
+			border-right: 1.5px solid #000;
 		}
 
 		.navigation__navlink--state-active {
-			border-top-color: $gold;
-		}
-
-		.navigation__img--build-ribbon {
-
+			border-top: 4px solid $gold;
 		}
 }
 
@@ -101,10 +103,10 @@ a {
 	.hero__image {
 		background-image: url(../img/vehicles-wrangler-main.jpg);
 		width: 100%;
-		height: 500px;
-		background-size: cover;
-		background-position: top center;
-		padding: 4vw 3vw 3vw 4vw;
+		height: 600px;
+		background-size: auto 100%;
+		background-position: center;
+		padding: 40px 20px 150px 50px;
 	}
 
 	.hero--content {
@@ -136,7 +138,6 @@ a {
 .banner-middle {
 	margin-left: 5%;
 	margin-right: 5%;
-	position: absolute;
 	transform: translateY(-25%);
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
@@ -205,6 +206,7 @@ a {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
+		max-height: 131px;
 		background-image: url(../img/awards-background.jpg);
 		background-size: fill;
 		padding: 2.5vw;
@@ -234,6 +236,35 @@ a {
 		font-size: 2vw;
 	}
 
+}
+
+.sitemap {
+	@include flexRow;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 6vw;
+	@include sitemapMargins;	
+
+	.sitemap__link {
+		margin-bottom: 0.5vw;
+		font-size: 1.25vw;
+		color: $lightGrey;
+	}
+
+	.sitemap__link--category-heading {
+		font-weight: 700;
+		color: $offWhite;
+		text-transform: uppercase;
+		margin-bottom: 1.25vw;
+	}
+}
+
+.footer__copy {
+	font-size: 1vw;
+	margin-bottom: 1vw;
+	@include sitemapMargins;
+	max-width: 70%;
 }
 
 
